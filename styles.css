@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden; /* Забороняє горизонтальний скрол */
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Balloons */
+.balloons {
+    position: relative;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon::after {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon.red {
+    background: #ff6b6b;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.balloon.yellow {
+    background: #ffd93d;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.balloon.blue {
+    background: #74c0fc;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.balloon.green {
+    background: #69db7c;
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.message-container {
+    margin: 30px auto;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Memory Gallery */
+.hidden {
+    display: none;
+}
+
+.memory-image {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Buttons */
+.cta-button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ff4c4c;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}

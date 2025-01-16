@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <h1>Дорогенька моя, кохана моя 💖</h1>
+      <h2>З твоїм повноліттям! 🎉</h2>
+      <p class="subtitle">Сайт для тебе ❤️</p>
+    </div>
+
+    <div class="balloons">
+      <div class="balloon red"></div>
+      <div class="balloon yellow"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon green"></div>
+    </div>
+
+    <div class="message-container">
+      <p class="message">
+        Невже ти стала дорослою... 🥲 Але для мене ти все одно залишишся моєю маленькою жучкою! 😜  
+        <br><br>
+        Бажаю тобі, щоб збулися всі твої мрії 🌟 Щоб кожен день ти прокидалася з усмішкою 😊 і лягала спати з відчуттям щастя. Нехай у твоєму житті буде лише радість, тепло, щирі люди й неймовірні пригоди. 🤗  
+        <br><br>
+        Я хочу, щоб ти ніколи не сумувала, бо твої сльози — дуже мене засмучують 💔 А твої очі, коли ти щаслива, — дарують радість всім навкруг! 💖  
+        <br><br>
+        Дякую тобі, що ти в мене є. Ти — моє сонечко, моє натхнення і моє щастя!  
+        <br><br>
+        Зі святом тебе, моє кохання! 🥰🎂
+      </p>
+    </div>
+
+    <div class="cta-container">
+      <button class="cta-button" onclick="addMoreBalloons()">Тицяй на мене 🎈</button>
+      <button class="cta-button" onclick="showFireworks()">🎆</button>
+      <button class="cta-button" onclick="toggleGallery()">Moments 📸</button>
+    </div>
+
+    <div id="gallery" class="hidden">
+      <img id="memory-image" src="images/moment1.jpg" alt="Moment" class="memory-image">
+      <button class="cta-button" onclick="showNextMemory()">Давай далі ➡️</button>
+    </div>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <footer>
+    <p>З любов’ю 💕</p>
+  </footer>
+
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 37 },
+        color: { value: ['#ff6b6b', '#ffd93d', '#74c0fc', '#69db7c'] },
+        shape: {
+          type: 'image',
+          image: {
+            src: 'images/rose.png',
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: { value: 0.8 },
+        size: { value: 20, random: true },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: 'bottom',
+          straight: false,
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: 'repulse' },
+          onclick: { enable: true, mode: 'push' }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
